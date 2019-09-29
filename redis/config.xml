@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <maxIdle>50</maxIdle>
+    <maxActive>100</maxActive>
+    <idleTimeout>10</idleTimeout>
+    <exhaustWait>true</exhaustWait>
+    <address>127.0.0.1:6379</address>
+    <connTimeout>1</connTimeout>
+    <readTimeout>1</readTimeout>
+    <writeTimeout>1</writeTimeout>
+</config>
