@@ -1,10 +1,24 @@
 package redis
 
 import (
+	"encoding/xml"
+	"io/ioutil"
 	"math"
 	"math/rand"
 	"testing"
 )
+
+func loadConfig() (Config, error) {
+	b, err := ioutil.ReadFile("config.xml")
+	if err != nil {
+		return Config{}, err
+	}
+
+	var conf Config
+	err = xml.Unmarshal(b, &conf)
+
+	return conf, err
+}
 
 func TestLoadConfig(t *testing.T) {
 	t.Log(loadConfig())
